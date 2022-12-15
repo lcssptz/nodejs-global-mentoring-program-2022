@@ -4,12 +4,16 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start:task1": "nodemon src/task1"
+    "start:task1": "nodemon src/task1",
+    "start:task2": "nodemon --ignore '*.txt' src/task2"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
   }
 }
