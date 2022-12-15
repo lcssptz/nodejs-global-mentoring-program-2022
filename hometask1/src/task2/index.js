@@ -1,1 +1,1 @@
-import './task2'
+require('./task2')

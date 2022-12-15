@@ -2,14 +2,11 @@
 const fs = require('fs')
 const csv = require('csvtojson')
 
-const sourCSV = './csv/nodejs-hw1-ex1.csv'
-const destJSON = './csv/nodejs-hw1-ex1.txt'
-
 const convertCsvToJson = (sour, dest) => {
-  const readableStream = fs.createReadStream(sour, 'utf8')
-  const writableStream = fs.createWriteStream(dest, 'utf8')
-
   try {
+    const readableStream = fs.createReadStream(sour, 'utf8')
+    const writableStream = fs.createWriteStream(dest, 'utf8')
+
     readableStream
     .pipe(csv())
     .pipe(writableStream)
@@ -17,5 +14,8 @@ const convertCsvToJson = (sour, dest) => {
     console.error(JSON.stringify(err))
   }
 }
+
+const sourCSV = './csvx/nodejs-hw1-ex1.csv'
+const destJSON = './csv/nodejs-hw1-ex1.txt'
 
 convertCsvToJson(sourCSV, destJSON)
