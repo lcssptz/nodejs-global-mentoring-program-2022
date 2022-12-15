@@ -6,8 +6,8 @@ const sourCSV = './csv/nodejs-hw1-ex1.csv'
 const destJSON = './csv/nodejs-hw1-ex1.txt'
 
 const convertCsvToJson = (sour, dest) => {
-  const readableStream = fs.createReadStream(sourCSV, 'utf8')
-  const writableStream = fs.createWriteStream(destJSON, 'utf8')
+  const readableStream = fs.createReadStream(sour, 'utf8')
+  const writableStream = fs.createWriteStream(dest, 'utf8')
 
   try {
     readableStream
