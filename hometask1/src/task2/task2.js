@@ -8,8 +8,8 @@ const convertCsvToJson = (sour, dest) => {
     const writableStream = fs.createWriteStream(dest, 'utf8')
 
     readableStream
-    .pipe(csv())
-    .pipe(writableStream)
+      .pipe(csv())
+      .pipe(writableStream)
   } catch(err) {
     console.error(JSON.stringify(err))
   }
